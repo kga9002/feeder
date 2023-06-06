@@ -1,0 +1,31 @@
+.App {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+}
+
+.sideBar {
+	width: 15%;
+	height: 100%;
+	display: inline-block;
+}
+
+.contents {
+	width: 85%;
+	height: 100%;
+	display: inline-block;
+}
+
+.logo {
+	height: 10%;
+}
+
+img {
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.navBarName {
+	padding: 5px 0px 5px 15px;
+}

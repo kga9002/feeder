@@ -1,0 +1,27 @@
+.list {
+	float: right;
+	padding: 10px 10px 10px 0px;
+	text-decoration: none;
+	display: block;
+	color: black;
+}
+.list:visited {
+	text-decoration: none;
+	color: black;
+}
+.list:hover {
+	text-decoration: none;
+}
+.list:focus {
+	text-decoration: none;
+}
+.list.active {
+	color: #ff5e5e;
+}
+
+.list-cover {
+	display: block;
+	width: 100%;
+	height: 50px;
+	text-align: center;
+}
