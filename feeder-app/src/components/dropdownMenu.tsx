@@ -6,12 +6,12 @@ const DropdownMenu = () => {
 	return (
 		<div>
 			<div className='list-cover'>
-				<NavLink to='./feedAnalyze' className='list'>
+				<NavLink to='/feedAnalyze' className='list'>
 					급이 내역 분석
 				</NavLink>
 			</div>
 			<div className='list-cover'>
-				<NavLink to='./feedManage' className='list'>
+				<NavLink to='/feedManage' className='list'>
 					급이 내역 관리
 				</NavLink>
 			</div>

@@ -1,13 +1,13 @@
 export interface FeederList {
 	id: number
 	name: string
-	penInfo: PenInfo
+	pen_info: PenInfo
 }
 
 interface PenInfo {
 	id: number
 	name: string
-	piggeryInfo: PiggeryInfo
+	piggery_info: PiggeryInfo
 }
 
 interface PiggeryInfo {
@@ -17,7 +17,7 @@ interface PiggeryInfo {
 
 export interface LogList {
 	id: number
-	feederInfo: FeederList
+	feeder_info: FeederList
 	amount: number
 	created_datetime: Date
 }

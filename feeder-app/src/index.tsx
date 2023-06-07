@@ -4,11 +4,17 @@ import './styles/index.css'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
 import { BrowserRouter } from 'react-router-dom'
+import { FeedAnalyzeProvider } from './contexts/feedAnalyzeContext'
+import { FeedManageProvider } from './contexts/feedManageContext'
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 root.render(
 	<BrowserRouter>
-		<App />
+		<FeedAnalyzeProvider>
+			<FeedManageProvider>
+				<App />
+			</FeedManageProvider>
+		</FeedAnalyzeProvider>
 	</BrowserRouter>
 )
 

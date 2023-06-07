@@ -1,0 +1,59 @@
+.headerContainer {
+	width: 100%;
+	height: 10%;
+	padding: 10px 0px 10px 10px;
+}
+
+.titleContainer {
+	margin-bottom: 20px;
+}
+
+.title > span {
+	font-weight: bold;
+}
+
+.inputBtn {
+	float: right;
+	border-radius: 38%;
+	width: 100px;
+	background-color: white;
+	font-weight: bold;
+}
+
+.searchContainer > div {
+	display: inline-flex;
+	max-width: 400px;
+}
+
+.searchContainer > div:nth-child(1) {
+	display: block;
+}
+
+.searchContainer {
+	background-color: whitesmoke;
+}
+
+.resetBtn {
+	float: right;
+	border-radius: 38%;
+	width: 100px;
+	background-color: black;
+	color: white;
+	font-weight: bold;
+	margin-top: 10px;
+}
+
+.datePicker {
+	width: 100px;
+}
+
+table {
+	width: 100%;
+	text-align: center;
+	line-height: 2;
+	border-top: 2px solid black;
+}
+
+table td {
+	border-bottom: 1px solid gray;
+}

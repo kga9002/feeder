@@ -40,3 +40,8 @@
 	float: right;
 	display: block;
 }
+
+.graphDiv {
+	width: 1000px;
+	height: 300px;
+}
