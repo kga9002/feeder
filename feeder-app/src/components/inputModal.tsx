@@ -16,10 +16,12 @@ function InputModal({ setIsModalOpen, setStatus }: any) {
 	const [selectedDate, setSelectedDate] = useState<Date>(new Date())
 	const [selectedFeeder, setSelectedFeeder] = useState<string>('null')
 
+	// 모달 닫기
 	const closeModal = () => {
 		setIsModalOpen(false)
 	}
 
+	// input number 10단위로 올리고 숫자 체크
 	const handleIncrement = () => {
 		setAmountNumber(amountNumber + 10)
 		if (amountNumber + 10 > 999) {
@@ -28,6 +30,7 @@ function InputModal({ setIsModalOpen, setStatus }: any) {
 		}
 	}
 
+	// input number 10단위로 내리고 숫자체크
 	const handleDecrement = () => {
 		setAmountNumber(amountNumber - 10)
 		if (amountNumber - 10 < 0) {
@@ -36,6 +39,7 @@ function InputModal({ setIsModalOpen, setStatus }: any) {
 		}
 	}
 
+	// input number 키보드 입력시 숫자 체크
 	const checkNumber = (num: number, e: React.ChangeEvent<HTMLInputElement>) => {
 		if (num < 0) {
 			alert('0보다 작은 수는 입력할 수 없습니다.')
@@ -48,15 +52,18 @@ function InputModal({ setIsModalOpen, setStatus }: any) {
 		}
 	}
 
+	// input number value 설정해도 수기입력 가능하게 조치
 	const changeNumber = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
 		checkNumber(parseInt(e.target.value), e)
 		setAmountNumber(parseInt(e.target.value))
 	}, [])
 
+	// 선택한 급이기 아이디 세팅
 	const handleSelectChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
 		setSelectedFeeder(e.target.value)
 	}
 
+	// 데이터 post 보내기
 	const submitData = async () => {
 		const headers = {
 			'Content-Type': 'application/json',

@@ -58,6 +58,7 @@ function FeedManage() {
 		label: data.name,
 	}))
 
+	// status 가져와서 toast 띄우기
 	useEffect(() => {
 		if (status === 200) {
 			toast('저장이 완료 되었습니다.')

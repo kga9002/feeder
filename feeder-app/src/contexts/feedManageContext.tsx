@@ -61,10 +61,12 @@ const FeedManageProvider = ({ children }: FeedManageProviderProps) => {
 	const selectRef = useRef<HTMLSelectElement>(null)
 	const feederSelectRef = useRef<any>(null)
 
+	// 해당 데이터 변할때마다 새로 불러오기
 	useEffect(() => {
 		fetchData()
 	}, [startDate, endDate, selectedOptions, sortData])
 
+	// 데이터 요청
 	const fetchData = async (): Promise<void> => {
 		try {
 			let logData = {
@@ -169,13 +171,16 @@ const FeedManageProvider = ({ children }: FeedManageProviderProps) => {
 		return b.amount - a.amount
 	}
 
+	// 급이량 정렬 선택했을때 세팅
 	const handleAmountChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
 		setSortByAmount(e.target.value)
 	}
 
+	// 날짜 정렬 선택했을때 세팅
 	const handleDateChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
 		setSortData(e.target.value)
 	}
+
 	return (
 		<FeedManageContext.Provider
 			value={{
